@@ -1,8 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
 </head>
 <body>
 <div class="container">
@@ -17,7 +20,7 @@
 		<input type="text" name="title" value=""></input>
 	<br/>
 	<p> <label> Author </label></p><br/>
-		<input type="text" name="title" value=""></input>
+		<input type="text" name="author" value=""></input>
 	<br/>
 	<p> <label> Price </label></p><br/>
 		<input type="text" name="price" value=""></input>
@@ -25,6 +28,7 @@
 	<input type="submit" value="Submit"/>
 </form>
 </div>
+
 
 </body>
 </html>

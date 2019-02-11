@@ -9,12 +9,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"></link>
 </head>
 <body>
 
 <% ArrayList<Book> bookList = (ArrayList<Book>)request.getAttribute("bookList"); %>
 
+<div class="container"> 
+<div class="links"> 
+	<h1> <a href="list"> Book Store </a></h1>
+	<h2> <a href="new"> Add New Book </a></h1>
+</div>
 <table>
 	<tr> 
 		<th> Title </th>
@@ -30,5 +35,7 @@
 	</tr>
 <%}%>
 </table>
+
+</div>
 </body>
 </html>
