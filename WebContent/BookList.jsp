@@ -15,10 +15,6 @@
 
 <% ArrayList<Book> bookList = (ArrayList<Book>)request.getAttribute("bookList"); %>
 
-<%-- Book Title: ${book_title} --%>
-<%-- <c:forEach items="${books}" var="item">
-	<p> Book: ${item} </p>
-</c:forEach> --%>
 <table>
 	<tr> 
 		<th> Title </th>
