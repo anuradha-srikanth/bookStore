@@ -17,16 +17,16 @@ import javax.servlet.http.HttpServletResponse;
 //@WebServlet("/books/*")
 public class ControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ArrayList<String> books = new ArrayList<String>();
+	private ArrayList<Book> bookList = new ArrayList<Book>();
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ControllerServlet() {
         super();
-        books.add("Frankenstein");
-		books.add("1984");
-		books.add("Harry Potter");
+        bookList.add(new Book("To Kill A Mockingbird", "Harper Lee", 5.50f));
+        bookList.add(new Book("1984", "George Orwell", 10.53f));
+        bookList.add(new Book("Harry Potter", "J.K Rowling", 24.23f));
     }
 
 	/**
@@ -43,7 +43,7 @@ public class ControllerServlet extends HttpServlet {
 //		output.println("Book title: " + title);
 //		output.println("Author: " + author);
 //		ArrayList<String> books = new ArrayList();
-		request.setAttribute("books", books);
+		request.setAttribute("bookList", bookList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/BookList.jsp");
 		dispatcher.forward(request, response);
 	}
